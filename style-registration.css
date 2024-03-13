@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+html, body {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: linear-gradient(to left, #daa18b, #e4978a, #ed8d8d, #f38397, #f679a5, #f07ab6, #e77dc8, #d982d9, #c48fe7, #ad9bf0, #98a5f4, #86aef3);     */
+    background-image: linear-gradient(to left, #9dd2af, #a9dab1, #b5e1b4, #c2e9b6, #cff0b9, #c9edb9, #c3e9ba, #bde6ba, #a7d6b7, #96c4b2, #89b3aa, #80a19f);
+}
+
+.number input, .email input {
+    border: none;
+}
+
+/* background color */
+form, .first-name input, .last-name input, .number input, .email input {
+    border-bottom: 1px solid rgb(160, 174, 226); 
+}
+
+
+
+form {
+    width: 70vh;
+    height: auto;
+    border-radius: 2vh;
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -30px, rgba(10, 37, 64, 0.8) 0px -2px 6px 0px inset;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    font-size: 6vh;
+}
+
+.container hr {
+    width: 95%;
+    margin-bottom: 4vh;
+    border: 0.5px solid #491ba3;
+
+}
+
+.container p {
+    display: flex;
+    justify-content: center;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 600;
+    font-size: 1.8vh;
+    margin-top: 3vh;
+}
+
+/* ========================== */
+
+.first-name {
+    display: flex;
+    align-items: center;
+    width: 50.5vh;
+    border: none;
+}
+
+.first-name i {
+    margin: 0 3vh 2.5vh 0;
+}
+
+.first-name input {
+    border-radius: 4px;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 2vh;
+}
+
+.first-name input:focus {
+    border-bottom: 1px solid #7e0596;
+    transform: 0.5s;
+    background-color: #f1f1f1;
+}
+
+/* =========================== */
+.last-name {
+    margin-left: 4.5vh;
+    width: 46vh;
+}
+
+.last-name input {
+    border-radius: 4px;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 2vh;
+}
+
+.last-name input:focus {
+    border-bottom: 1px solid #7e0596;
+    transform: 0.5s;
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+
+/* =========================== */
+
+.number {
+    display: flex;
+    align-items: center;
+}
+
+.number i {
+    margin: 0 2.5vh 0vh 0vh;
+}
+
+.number input {
+    padding: 2vh;
+    border-radius: 4px;
+    width: 46vh;
+    margin-top: 1vh;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 2vh;
+    background-color: #f1f1f1;
+}
+
+.number input:focus {
+    border-bottom: 1px solid #7e0596;
+    transform: 0.5s;
+    outline: none;
+}
+
+
+/* ========================== */
+
+.email {
+    display: flex;
+    align-items: center;
+}
+
+.email i {
+    margin: 4vh 2.5vh 0vh 0vh;
+}
+
+.email input {
+    padding: 2vh;
+    margin-top: 4vh;
+    border-radius: 4px;
+    width: 46vh;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 2vh;
+    background-color: #f1f1f1;
+}
+
+.email input:focus {
+    border-bottom: 1px solid #7e0596;
+    transform: 0.5s;
+    outline: none;
+    background-color: #f1f1f1;
+}
+/* ========================== */
+
+.remember-me-label {
+    font-size: 2.1vh;
+    font-family: "Comfortaa", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    color: #5d4e33;
+}
+
+.remember-me-label input {
+    margin-right: 2vh;
+}
+
+/* ========================== */
+.clearfix {
+    display: flex;
+    justify-content: center;
+}
+
+.clearfix button {
+    border-radius: 2vh;
+    padding: 2vh 1vh;
+    font-size: 2.5vh;
+    font-family: "Comfortaa", sans-serif;
+}
+
+
+.clearfix button:hover {
+    background-color: #b94ece;
+    color: #d3c0be;
+    transition: 0.5s;
+}
+
+
+/* The Animation Part */
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.svg-container {
+    position: fixed;
+    top: 10%;
+    left: -10%;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+}
+
+svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
+/* Style the SVG path */
+path {
+    stroke: rgb(6, 9, 45);
+    stroke-width: 2;
+    fill: rgb(172, 218, 142);
+    stroke-dasharray: 2000; 
+    stroke-dashoffset: 2000;
+    animation: draw 15s ease forwards;
+}
+
+
+
+/* ================================================================================================= */
+/* ================================================================================================= */
+/* ======================= R E S P O N S I V E N E S S    B E G I N S    H E R E =================== */
+/* ================================================================================================= */
+/* ================================================================================================= */
+
+@media only screen and (max-width: 768px) {
+    html, body {
+        margin: 15% 0 0 5%;
+        background-image: none;
+        background-color: rgb(140, 186, 194); /*Chnage it if needed*/
+    }
+
+    .samvid-logo {
+        height: 15vh;
+        width: 31vh;
+        margin: -100vh 0vh 0 -5vh;
+    }
+
+    form {
+        width: 90%;
+        height: 90%;
+        margin: 18% 0 0 0;
+        max-width: 500px;
+    }
+
+    .container h1 {
+        font-size: 4.5vh;
+    }
+
+    .container p {
+        font-size: 1.5vh;
+    }
+    
+    .container hr {
+        width: 85%;
+        margin-bottom: 3vh;
+    }
+
+    /* ===================== */
+
+    .first-name {
+        width: 44vh;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .first-name input {
+        font-size: 1.8vh;
+    }
+
+    .first-name i {
+        margin: 0 1.5vh 4vh 1.4vh;
+    }
+
+    /* ====================== */
+
+    .last-name {
+        width: 39vh;
+        margin: 0 3vh 0vh 7.2vh;
+    }
+
+    .last-name input {
+        font-size: 1.8vh;
+    }
+
+    .number {
+        width: 44vh;
+        margin: 0 2vh 0vh 2vh;
+    }
+
+    .number i {
+        margin: 0 1.5vh 0vh 1.8vh;
+        font-size: 2vh;
+    }
+
+    /* ======================= */
+
+    .email {
+        width: 44vh;
+        margin: 0 2vh 2.5vh 2vh;
+    }
+
+    .email i {
+        margin: 4vh 1.5vh 0vh 1.8vh;
+        font-size: 2vh;
+    }
+
+    /* ======================= */
+
+    .svg-container {
+        position: fixed;
+        top: 25%;
+        left: -10%;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    path {
+        stroke: rgb(16, 7, 7);
+        fill: rgb(222, 200, 166);
+        animation: draw 10s ease forwards;
+    }
+}
+
+
+

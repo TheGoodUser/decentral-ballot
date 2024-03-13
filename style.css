@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+html, body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    background-color: black;
+}
+
+
+.container {
+    background-image: linear-gradient(to left top, #cc9999, #daab95, #dcc297, #d3dba5, #c0f3c4);
+    /* background-image: linear-gradient(to left, #1e65cf, #0094e1, #00b8c5, #52d39e, #cae58d); */
+    height: 96vh;
+    width: 97vw;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.header img {
+    height: 18vh;
+    width: 13vh;
+}
+
+.header h1 {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 6vh;
+    font-weight: bold;
+    color: #22296f;
+}
+
+.voter-info {
+    background-image: linear-gradient(to left, #daa18b, #e4978a, #ed8d8d, #f38397, #f679a5, #f07ab6, #e77dc8, #d982d9, #c48fe7, #ad9bf0, #98a5f4, #86aef3);
+    height: 76vh;
+    width: 32vw;
+    border-radius: 10px;
+}
+
+.votes {
+    background-image: linear-gradient(to left top, #cf9c95, #d3a0ae, #caa8c8, #b7b4db, #9fc0e4);
+    height: 76vh;
+    width: 62vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    pointer-events: none;
+}
+
+.party {
+    background-color: rgb(181, 206, 165);
+    height: 50vh;
+    width: 18vw;
+    border-radius: 50px;
+    border-bottom: 12px solid rgb(21, 10, 76);
+    border-left: 12px solid  rgb(21, 10, 76);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}  
+
+.party-name {
+    background-color: rgb(222, 162, 162);
+    height: 22vh;
+    width: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 8vh;
+}
+
+.party-name:hover {
+    transition: 0.5s;
+    transform: scale(1.08);
+}
+
+.party p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: rgb(134, 132, 239);
+    padding: 2vh 4vw;
+    border-radius: 10px;
+    color: black;
+}
+
+.party p:hover {
+    background-color: rgba(134, 132, 239, 0.8);
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.input-value {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.userid {
+    text-align: center;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.userid p {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
+    color: rgb(0, 0, 0);
+}
+
+.userid input {
+    width: 20vw;
+    height: 5vh;
+    border: none;
+    border-bottom: 1px solid rgb(160, 174, 226);
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+.userid input:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(0, 10, 44);
+}
+
+
+.userid i {
+    font-size: 2.5vh;
+    color: rgb(30, 0, 63);
+    margin: 0 1vw 0 0;
+}
+
+.userid button {
+    width: 10vw;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+    cursor: pointer;    
+    margin-top: 2vh;
+}
+
+.userid button:hover {
+    background-color: rgb(0, 0, 0, 0.9);
+    transition: 0.5s;
+
+}
+
+.userid button:active {
+    transform: scale(0.95);
+}
+
+
+
+/* The Animation Part */
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.svg-container {
+    position: fixed;
+    top: 51%;
+    left: -8%;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+
+svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
+/* Style the SVG path */
+path {
+    stroke: rgb(6, 9, 45);
+    stroke-width: 2;
+    fill: rgb(172, 218, 142);
+    stroke-dasharray: 2000; 
+    stroke-dashoffset: 2000;
+    animation: draw 15s ease forwards;
+}
+@media (max-width: 768px) {
+
+    .container {
+        height: 150vh;
+        /* width: 100vw; */
+    }
+
+    .header {
+        /* gap: 4vh; */
+        margin: 0 0 0 6vh;
+    }
+
+    .header h1 {
+        font-size: 5vh;
+    }
+
+    .header img {
+        height: 15vh;
+        width: 10vh;
+    }
+
+    .party-name {
+        background-color: rgb(222, 162, 162);
+        height: 8vh;
+        width: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 3vh;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .voter-info {
+        height: 40vh;
+        width: 90vw;
+        gap: 5vh;
+    }
+
+    .userid p {
+        font-size: 2vh;
+    }
+
+    .userid input {
+        width: 60vw;
+        height: 5vh;
+        font-size: 2vh;
+    }
+
+    .userid i {
+        margin: 0 2vw 0 0;
+    }
+
+    .userid button {
+        width: 32vw;
+        height: 6vh;
+        font-size: 2vh;
+        margin-top: 2vh;
+    }
+
+    .svg-container {
+        position: absolute;
+        top: 47%;
+        left: 20%;
+        height: 18vh;
+        width: 60vw;
+    }
+
+    .votes {
+        flex-direction: column;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .votes p {
+        width: 20vw;
+    }
+
+    .party {
+        height: 15vh;
+        width: 70vw;
+        border-radius: 30px;
+        border-bottom: 8px solid rgb(21, 10, 76);
+        border-left: 8px solid  rgb(21, 10, 76);
+        padding: 1vh;
+        flex-direction: row;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
